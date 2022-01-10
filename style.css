@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&family=Overpass:wght@100&family=The+Nautigal&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    border: none;
+    list-style: none;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    overflow-x: hidden;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: Inter;
+    max-height: 100vh;
+}
+
+.slide-n-text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem .5rem;
+}
+
+.slider{
+    width: 25rem;
+    height: auto; 
+    overflow: hidden;
+    box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, .5);
+    position: relative;
+    z-index: 5;
+}
+
+.slider .img{
+    width: 100%;
+    display: flex;
+    transform: translate(0);
+    transition: all .4s;
+}
+
+.slider img{
+    width: 100%;
+}
+
+.svg-1{
+    position: absolute;   
+    top: 2rem;
+    left: 50%;
+    transform: translate(-50%);
+    background-image: url(./images/pattern-bg.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 33rem;
+    height: 31rem;
+}
+
+.buttons{
+    width: 6rem;
+    justify-content: space-between;
+    display: inline-flex;
+    padding:.5rem 1rem;
+    border-radius: 4rem;
+    background-color: white;
+    z-index: 79;
+    position: relative;
+    top: -1.3rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.buttons img{
+    cursor: pointer;
+}
+
+.texts{
+    margin-top: 1rem;
+    position: relative;
+    min-width: 39rem;
+}
+
+.text{
+    text-align: center;
+    padding: 1rem 4rem;
+    position: absolute;
+    transition: all .4s;
+    top: 0;
+    left: 0;
+}
+
+.quotation{
+    background-image: url(./images/pattern-quotes.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 4rem;
+    height: 4rem;
+}
+
+.text article{
+    color: hsl(240, 38%, 30%);
+    font-weight: 100;
+    font-size: 1.8rem;
+}
+
+.name{
+    display: block;
+    font-weight: 600;
+    color:   hsl(240, 38%, 20%);
+    margin-top: 1rem;
+    margin-bottom: .4rem;
+    font-size: 1.6rem;
+}
+
+.job{
+    color: hsl(240, 18%, 77%);
+    font-weight: 300;
+    font-size: 1.3rem;
+}
+
+
+
+.attribution{
+    z-index: 8;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1rem;
+}
+
+.attribution a{
+  text-decoration: underline;
+}
+
+
+    
+
+@media only screen and (min-width:600px){
+
+    html{
+        font-size: 70%;
+    }
+}
+
+@media only screen and (min-width:700px){
+
+    html{
+        font-size: 80%;
+    }
+}
+
+@media only screen and (min-width:1000px){
+
+    html{
+        font-size: 90%;
+    }
+
+    body{
+        top: 50%;
+        left: 45%;
+    }
+
+    .slide-n-text{
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    .svg-1{
+        position: absolute;   
+        left:unset;
+        right: 20%;
+        transform: translate(50%);
+    }
+
+    .buttons{
+        left: 25%;
+    }
+    
+    .texts{
+        margin-top: 0;
+        position: relative;
+        min-width: 49rem;   
+        top: -8rem;
+        right: -8rem;
+        z-index: 8;
+    }
+    
+    .text{
+        text-align: left;
+        padding: 1rem 5rem 1rem 0;
+        position: absolute;
+        transition: all .4s;
+        top: 0;
+        left: 0;
+    }
+    
+    .text article{
+        font-size: 2rem;
+    }
+
+    .quotation{
+        top: -2rem;
+        left: 30%;
+        transform: translateX(-50%);
+        width: 8rem;
+        height: 8rem;
+    }
+    
+    .name{
+        display: inline-block;
+        margin-right: .5rem;
+    }
+}
+
+@media only screen and (min-width:1250px) {
+
+    html{
+        font-size: 110%;
+    }
+
+    .quotation{
+        left: 9rem;
+    }
+}
